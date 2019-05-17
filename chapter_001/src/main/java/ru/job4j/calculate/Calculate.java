@@ -1,9 +1,26 @@
-package ru.job4j.calculate;
+package ru.kudabaev;
 
-public class Calculate{
+/**
+ *Class Calculate решение задачи части 001 урок1.
+ *@author Kudabaev
+ *@since 17.05.2019
+ */
 
-	public static void main(String[] args) {
-		System.out.println("Hello World");
+/**
+* Метод для тестирования.
+* @param value строка для вывода в консоль
+* @return String Value.
+*/
+
+public class Calculate {
+	public String echo(String value){
+	return String.format("%s %s %s", value, value, value);
 	}
 
+public static void main(String[] arg) {
+	Calculate calc = new Calculate();
+	System.out.println(calc.echo("aah"));
+
+
+}
 }
