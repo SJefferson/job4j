@@ -7,19 +7,20 @@ package ru.job4j.calculate;
  */
 
 public class Calculate {
-/**
-* Метод для тестирования.
-* @param value строка для вывода в консоль
-* @return String Value.
-*/
-	public String echo(String value){
-	return String.format("%s %s %s", value, value, value);
-	}
+ /**
+  * Main.
+  * @param args - args.
+  */
+ public static void main(String[] args) {
+    System.out.println("Hello World");
+  }
 
-public static void main(String[] arg) {
-	Calculate calc = new Calculate();
-	System.out.println(calc.echo("aah"));
-
-
-}
+    /**
+     * Method echo.
+     * @param name Your name.
+     * @return Echo plus your name.
+     */
+    public String echo(String name) {
+        return "Echo, echo, echo : " + name;
+    }
 }
