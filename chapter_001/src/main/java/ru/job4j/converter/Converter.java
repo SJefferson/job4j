@@ -41,3 +41,4 @@ public class Converter {
 		return value * 70;
 	}
 }
+

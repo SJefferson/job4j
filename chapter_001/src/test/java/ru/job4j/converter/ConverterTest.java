@@ -14,10 +14,18 @@ public class ConverterTest {
     }
 
     @Test
+    public void when1EuroThen70Rubles() {
+        Converter converter = new Converter();
+        int result = converter.rubleToEuro(70);
+        int expected = 1;
+        assertThat(result, is(expected));
+    }
+
+    @Test
     public void when70RubleToEuroThen1() {
         Converter converter = new Converter();
-        int result = converter.euroToRuble(70);
-        int expected = 1;
+        int result = converter.euroToRuble(1);
+        int expected = 70;
         assertThat(result, is(expected));
     }
 
@@ -29,11 +37,5 @@ public class ConverterTest {
         assertThat(result, is(expected));
     }
 
-    @Test
-    public void when1EuroThen70Rubles() {
-        Converter converter = new Converter();
-        int result = converter.rubleToEuro(70);
-        int expected = 1;
-        assertThat(result, is(expected));
-    }
+
 }
