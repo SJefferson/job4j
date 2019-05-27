@@ -1,7 +1,7 @@
 package ru.job4j.condition;
 
 
-import org.graalvm.compiler.core.common.type.ArithmeticOpTable;
+
 
 public class Triangle {
     /**
