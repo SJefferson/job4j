@@ -26,10 +26,10 @@ public class BoardTest {
     @Test
     public void when5x4() {
         Board board = new Board();
-        String rsl = board.paint(5, 4);
+        String rsl = board.paint(4, 5);
         String ln = System.lineSeparator();
         assertThat(rsl, is(
-                String.format("X X \r\n X X\r\nX X \r\n X X\r\nX X \r\n")
+                String.format("X X X\n X X \nX X X\n X X\n")
                 )
         );
     }
