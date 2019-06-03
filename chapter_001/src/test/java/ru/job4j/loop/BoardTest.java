@@ -24,12 +24,12 @@ public class BoardTest {
     }
 
     @Test
-    public void when5x4() {
+    public void when4x5() {
         Board board = new Board();
         String rsl = board.paint(4, 5);
         String ln = System.lineSeparator();
         assertThat(rsl, is(
-                String.format("X X X\n X X \nX X X\n X X\n")
+                String.format("X X X\r\n X X \r\nX X X\r\n X X \r\n")
                 )
         );
     }
