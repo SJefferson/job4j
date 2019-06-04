@@ -3,7 +3,7 @@ import java.util.function.BiPredicate;
 
 public class ProPaint {
     public String rightTrl(int height) {
-        return this.loopBy(height,height,(row, column) -> row >= column
+        return this.loopBy(height, height, (row, column) -> row >= column
         );
     }
 
