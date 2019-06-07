@@ -27,10 +27,10 @@ public class FindLoopTest {
     }
 
     @Test
-    public void whenArrayHas77Then3() {
+    public void whenArrayHas4Then3() {
         FindLoop find = new FindLoop();
-        int[] input = new int[] {2, 4, 78, 77};
-        int value = 77;
+        int[] input = new int[] {10, 20, 3, 1};
+        int value = 1;
         int result = find.indexOf(input, value);
         int expect = 3;
         assertThat(result, is(expect));
