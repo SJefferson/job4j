@@ -28,4 +28,15 @@ public class MatrixCheckTest {
         boolean result = check.mono(input);
         assertThat(result, is(false));
     }
+
+    @Test
+    public void when2on2() {
+        MatrixCheck check = new MatrixCheck();
+        boolean[][] input = new boolean[][] {
+                {false, true},
+                {true, false}
+        };
+        boolean result = check.mono(input);
+        assertThat(result, is(true));
+    }
 }
