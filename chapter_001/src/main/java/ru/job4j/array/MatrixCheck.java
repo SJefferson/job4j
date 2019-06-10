@@ -17,7 +17,7 @@ public class MatrixCheck {
             boolean b = data[0][0];
             for (int tekDiag = 0; tekDiag != data[0].length; tekDiag++) {
                 if (b != data[tekDiag][tekDiag]) {
-                    firstDiag = false;
+                    firstDiag = false; ///спать)))
                 }
               }
             }
