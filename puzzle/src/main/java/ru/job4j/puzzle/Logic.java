@@ -70,31 +70,48 @@ public class Logic {
         int[][] table = this.convert();
         int si = 0, sj = 0;
         boolean result = false;
+//        for (int i = 0; i != this.size; i++) {
+//            if (table[i][0] != 0) {
+//                for (int h = 0; h != this.size; h++) {
+//                    if (table[i][h] != 0) {
+//                        si++;
+//                    }
+//                }
+//                if (si == this.size) {
+//                    result = true;
+//                }
+//            }
+//        }
+//
+//        for (int i = 0; i != this.size; i++) {
+//            if (table[0][i] != 0) {
+//                for (int v = 0; v != this.size; v++) {
+//                    if (table[v][i] != 0) {
+//                        sj++;
+//                    }
+//                }
+//                if (sj == this.size) {
+//                    result = true;
+//                }
+//            }
+//        }
         for (int i = 0; i != this.size; i++) {
-            if (table[i][0] != 0) {
+            if (table[i][i] != 0) {
                 for (int h = 0; h != this.size; h++) {
                     if (table[i][h] != 0) {
                         si++;
                     }
-                }
-                if (si == this.size) {
-                    result = true;
-                }
-            }
-        }
-
-        for (int i = 0; i != this.size; i++) {
-            if (table[0][i] != 0) {
-                for (int v = 0; v != this.size; v++) {
-                    if (table[v][i] != 0) {
+                    if (table[h][i] != 0) {
                         sj++;
                     }
                 }
-                if (sj == this.size) {
+                }
+                if (si == this.size || sj == this.size) {
                     result = true;
                 }
             }
-        }
+
+
         return result;
     }
 
