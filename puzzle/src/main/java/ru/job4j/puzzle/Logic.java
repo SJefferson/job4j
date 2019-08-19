@@ -108,7 +108,9 @@ public class Logic {
                 }
                 if (si == this.size || sj == this.size) {
                     result = true;
-                }
+                } else {
+                    si = 0; sj = 0;
+                        }
             }
 
 
