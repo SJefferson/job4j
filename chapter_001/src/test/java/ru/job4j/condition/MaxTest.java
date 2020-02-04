@@ -24,4 +24,19 @@ public class MaxTest {
         int result = max.max(2, 2);
         assertThat(result, is(2));
     }
+
+    @Test
+    public  void Max3() {
+        Max max = new Max();
+        int result  = max.Max(4,3,5);
+        assertThat(result, is(5));
+    }
+
+
+    @Test
+    public  void Max4() {
+        Max max = new Max();
+        int result  = max.Max(7,3,5,4);
+        assertThat(result, is(7));
+    }
 }
