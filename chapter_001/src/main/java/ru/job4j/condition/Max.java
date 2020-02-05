@@ -7,16 +7,16 @@ public class Max {
      return result;
     }
 
-    public int Max(int first, int second, int third) {
+    public int max(int first, int second, int third) {
         int result0, result;
-        result0 = first > second ? first : second;
-        result = result0 > third ? result0 : third;
+//        result0 = first > second ? first : second;
+        result = max(first,second) > third ?  max(first,second): third;
         return result;
     }
 
-    public  int Max(int fitst, int second, int third, int fourth){
+    public  int max(int fitst, int second, int third, int fourth){
         int result;
-        result = Max(fitst,second,third) > fourth ? Max(fitst,second,third) : fourth;
+        result = max(fitst,second) > max(third,fourth) ? max(fitst,second) : max(third,fourth);
         return result;
     }
 

@@ -28,7 +28,7 @@ public class MaxTest {
     @Test
     public  void Max3() {
         Max max = new Max();
-        int result  = max.Max(4,3,5);
+        int result  = max.max(4,3,5);
         assertThat(result, is(5));
     }
 
@@ -36,7 +36,7 @@ public class MaxTest {
     @Test
     public  void Max4() {
         Max max = new Max();
-        int result  = max.Max(7,3,5,4);
+        int result  = max.max(7,3,5,4);
         assertThat(result, is(7));
     }
 }
