@@ -9,14 +9,13 @@ public class Max {
 
     public int max(int first, int second, int third) {
         int result0, result;
-//        result0 = first > second ? first : second;
-        result = max(first,second) > third ?  max(first,second): third;
+        result = max(max(first,second), third);
         return result;
     }
 
     public  int max(int fitst, int second, int third, int fourth){
         int result;
-        result = max(fitst,second) > max(third,fourth) ? max(fitst,second) : max(third,fourth);
+        result = max(max(fitst,second), max(third,fourth));
         return result;
     }
 
