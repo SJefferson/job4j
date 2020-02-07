@@ -7,15 +7,12 @@ import static org.junit.Assert.assertThat;
 public class PointTest {
     @Test
     public void whenZeroAndTenThenTen() {
-        Point first = new Point(0, 0);
-        Point second = new Point(0, 10);
+        Point first = new Point(0, 5, 10);
+        Point second = new Point(0, 10, 15);
         double result = first.distance(second);
-        first.info();
-        second.info();
-        System.out.println(String.format("Result is %s", result));
-        assertThat(result, is(10D));
+        assertThat(result, is(7.07));
     }
-
+/*
     @Test
     public void whenCheckItself() {
         Point point = new Point(0, 0);
@@ -29,5 +26,5 @@ public class PointTest {
         first.info();
         Point second = new Point(2, 2);
         second.info();
-    }
+    }*/
 }

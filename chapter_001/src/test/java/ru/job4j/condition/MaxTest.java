@@ -32,7 +32,6 @@ public class MaxTest {
         assertThat(result, is(5));
     }
 
-
     @Test
     public  void Max4() {
         Max max = new Max();
