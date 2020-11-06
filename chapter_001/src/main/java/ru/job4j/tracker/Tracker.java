@@ -6,13 +6,14 @@ public class Tracker {
     private final Item[] items = new Item[100];
     /*** Указатель ячейки для новой заявки.*/
     private int position = 0;
+    private int ids = 1;
 
     /**
      * Метод добавления заявки в хранилище
      * @param item новая заявка
      */
     public Item add(Item item) {
-        item.setId(generateId());
+        item.setId(ids++);
         items[position++] = item;
         return item;
     }
@@ -25,25 +26,41 @@ public class Tracker {
         return result;
     }
 
-    public Item[] findByName(String key){
-        Item FbN[] = null;
+    public Item findByName(String name/*key*/){
+
+        Item result = null;
+        for (Item item : items)	{
+            if (item != null && item.getName().equals(name)) {
+                result = item;
+                break;
+            }
+        }
+        return result;
+
+
+        /*    Item FbN[] = null;
         for (int index = 0; index < items.length; index++) {
             Item item = items[index];
             if (item.getName().equals(key)) {
                 FbN[index] = item;}
             }
-        return FbN;
+        return FbN;*/
         }
 
+     public Item findById(int id){
+        Item result = null;
+        for (Item item : items) {
+            if (item != null && item.getId() == id) {
+                result = item;
+                break;
+            }
 
-    private String generateId() {
+            }
+            return result;
+        }
+
+       /* private String generateId() {
         Random rm = new Random();
         return String.valueOf(rm.nextLong() + System.currentTimeMillis());
-    }
-
-
-
-
-
-
+    }*/
 }
